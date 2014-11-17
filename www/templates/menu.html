@@ -1,0 +1,31 @@
+<ion-side-menus>
+
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-calm">
+      
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/donationrequests">
+           <i class="icon ion-help-buoy"></i> Donation Requests
+        </ion-item>
+         <ion-item nav-clear menu-close href="#/app/requestdonation">
+           <i class="icon ion-speakerphone"></i> Request A Donation
+        </ion-item>
+         <ion-item nav-clear menu-close href="#/app/inventory">
+           <i class="icon ion-clipboard"></i> Inventory
+        </ion-item>
+         <ion-item nav-clear menu-close href="#/app/needs">
+           <i class="icon ion-compose"></i> Current Needs
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
