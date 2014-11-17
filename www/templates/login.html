@@ -1,26 +1,44 @@
 <div class="modal">
-  <ion-header-bar class="bar bar-header bar-calm">
+  <ion-header-bar class="bar-balanced">
     <h1 class="title">Login</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-balanced" ng-click="closeLogin()">Close</button>
     </div>
   </ion-header-bar>
+  <ion-view title="Login">
   <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
+   
+    <form name="loginForm" ng-submit="doLogin()">
+
+      <div class="card list">
+      
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <span class="input-label">Username <span class="assertive">*</span>
+            <div class="error-container" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
+            <small class="assertive" ng-show="loginForm.username.$error.required">Please input a username</small>
+          </div>
+          </span>
+          
+          <input type="text" name="username" ng-model="loginData.username" required>
+
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <span class="input-label">Password <span class="assertive">*</span>
+            <div class="error-container" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+            <small class="assertive" ng-show="loginForm.password.$error.required">Please input a password</small>
+          </div>
+          </span>
+          
+          <input type="password" name="password" ng-model="loginData.password" required>
         </label>
         <label class="item">
           <button class="button button-block button-balanced" type="submit">Log in</button>
         </label>
+       
       </div>
-    </form>
+    </form>    
   </ion-content>
+</ion-view>
 </div>
+
 

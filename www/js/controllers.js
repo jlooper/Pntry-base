@@ -1,50 +1,48 @@
-angular.module('starter.controllers', [])
+angular.module('pntry.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
+  $scope.registerData = {};
+  
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
+  }).then(function(loginmodal) {
+    $scope.loginmodal = loginmodal;
   });
 
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/register.html', {
+    scope: $scope
+  }).then(function(registermodal) {
+    $scope.registermodal = registermodal;
+  });
 
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
+  //open/close routines
+  $scope.openLogin = function() {
+    $scope.loginmodal.show();
+  };
+  $scope.closeLogin = function(){
+    $scope.loginmodal.hide();
+  };
+  $scope.openRegister = function() {
+    $scope.registermodal.show();
+  };
+  $scope.closeRegister = function(){
+    $scope.registermodal.hide();
   };
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
+    
   };
-})
 
-.controller('DonationCtrl', function($scope) {
-  $scope.requests = [
-    { title: 'item 1', id: 1 },
-    { title: 'item 2', id: 2 }
-  ];
-})
-.controller('RequestCtrl', function($scope) {
-  
-})
-.controller('InventoryCtrl', function($scope) {
-  
-})
-.controller('NeedsCtrl', function($scope) {
-  
+  // Perform the register action when the user submits the registration form
+  $scope.doRegister = function() {
+    
+  };
 });
+
+
