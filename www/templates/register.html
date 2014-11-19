@@ -10,12 +10,20 @@
    <form name="registerForm" ng-submit="doRegister()">
       <div class="card list">
         <label class="item item-input">
+          <span class="input-label">Name<span class="assertive">*</span>
+           <div class="error-container">
+            <small class="assertive" ng-show="registerForm.displayname.$invalid">Please input your first and last name</small>
+          </div>
+        </span>
+          <input type="text" name="displayname" ng-model="registerData.displayname" required>
+        </label>
+        <label class="item item-input">
           <span class="input-label">Username<span class="assertive">*</span>
            <div class="error-container">
             <small class="assertive" ng-show="registerForm.username.$invalid">Please input a username</small>
           </div>
         </span>
-          <input type="text" name="username" ng-model="registerData.username"required>
+          <input type="text" name="username" ng-model="registerData.username" required>
         </label>
         <label class="item item-input">
           <span class="input-label">Password<span class="assertive">*</span>
