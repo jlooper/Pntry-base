@@ -14,8 +14,8 @@
       
         <label class="item item-input">
           <span class="input-label">Username <span class="assertive">*</span>
-            <div class="error-container" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
-            <small class="assertive" ng-show="loginForm.username.$error.required">Please input a username</small>
+            <div class="error-container">
+            <small class="assertive" ng-show="loginForm.username.$invalid">Please input a username</small>
           </div>
           </span>
           
@@ -24,8 +24,8 @@
         </label>
         <label class="item item-input">
           <span class="input-label">Password <span class="assertive">*</span>
-            <div class="error-container" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
-            <small class="assertive" ng-show="loginForm.password.$error.required">Please input a password</small>
+            <div class="error-container">
+            <small class="assertive" ng-show="loginForm.password.$invalid">Please input a password</small>
           </div>
           </span>
           

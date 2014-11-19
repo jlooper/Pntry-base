@@ -11,24 +11,24 @@
       <div class="card list">
         <label class="item item-input">
           <span class="input-label">Username<span class="assertive">*</span>
-           <div class="error-container" ng-show="registerForm.username.$dirty && registerForm.username.$invalid">
-            <small class="assertive" ng-show="registerForm.username.$error.required">Please input a username</small>
+           <div class="error-container">
+            <small class="assertive" ng-show="registerForm.username.$invalid">Please input a username</small>
           </div>
         </span>
           <input type="text" name="username" ng-model="registerData.username"required>
         </label>
         <label class="item item-input">
           <span class="input-label">Password<span class="assertive">*</span>
-          <div class="error-container" ng-show="registerForm.password.$dirty && registerForm.password.$invalid">
-            <small class="assertive" ng-show="registerForm.password.$error.required">Please input a password</small>
+          <div class="error-container">
+            <small class="assertive" ng-show="registerForm.password.$invalid">Please input a password</small>
             </div>
         </span>
           <input type="password" name="password" ng-model="registerData.password" required>
         </label>       
         <label class="item item-input">
           <span class="input-label">Email<span class="assertive">*</span>
-          <div class="error-container" ng-show="registerForm.email.$dirty && registerForm.email.$invalid">
-            <small class="assertive" ng-show="registerForm.email.$error.required">Please input an email</small>
+          <div class="error-container">
+            <small class="assertive" ng-show="registerForm.email.$invalid">Please input an email</small>
             </div>
         </span>
           <input type="email" name="email" ng-model="registerData.email" required>
